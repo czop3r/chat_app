@@ -1,0 +1,16 @@
+<div class="mainForm">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="row g-3">
+    
+        <label class="form-label" for="email">Email: </label>
+        <input class="form-control" id="email" type="email" placeholder="Your Email" name="email" ngModel required #emailInput="ngModel">
+        <!-- <span *ngIf="emailInput.hasError('required')&&emailInput.dirty">Field must not be empty.</span>
+        <span *ngIf="!emailInput.valid">E-Mail is invalid.</span> -->
+      
+        <label class="form-label" for="password">Password: </label>
+        <input class="form-control" id="password" type="password" placeholder="Your password" name="password" ngModel required minlength="6" #pwInput="ngModel">
+        <!-- <span>{{ pwInput.value?.length }} / 6</span>
+        <span *ngIf="!pwInput.hasError('required')">Has to be at least 6 characters long.</span> -->
+    
+        <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Login</button>
+      </form>
+</div>

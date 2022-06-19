@@ -1,0 +1,13 @@
+    <div class="mainContainer" #msgsView>
+        <div *ngFor="let msg of msgs" [className]="msg.email == user.email ? 'flexEnd' : 'flexStart'">
+            <div class="msgLabel">
+                <span>{{msg.email| emailPipe}}</span>
+                <span>{{msg.timeSend|date:'shortTime'}}</span>
+            </div>
+            <p>{{msg.msg}}</p>
+        </div>
+    </div>
+    <form #f="ngForm" class="input" (ngSubmit)="onSubmit(f)">
+        <input class="form-control" #msgSend type="text" placeholder="Write message" name="msgSend" ngModel required >
+        <button class="btn" type="submit" [disabled]="!f.valid">Send</button>
+    </form>

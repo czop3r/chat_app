@@ -1,0 +1,75 @@
+.mainContainer {
+    width: 90vw;
+    height: calc(80vh - 40px);
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+    div {
+        margin: 5px;
+        word-wrap: break-word;
+        width:150px;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        min-width: 30vw;
+        span {
+            display: inline-block;
+            width: max-content;
+            font-size: small;
+            color: grey;
+        }
+    }
+
+    .msgLabel {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+}
+
+.flexStart {
+    align-self: flex-start;
+    border-radius: 20px 20px 20px 0 ;
+    background-color:ghostwhite;
+}
+
+.flexEnd {
+    align-self: flex-end;
+    background-color: rgb(190, 196, 196);
+    border-radius: 20px 20px 0 20px;
+}
+
+.input {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+@media  (max-width: 988px) {
+    .mainContainer {
+        padding: 0;
+        div {
+            width: 70%;
+            span:nth-child(2n) {
+                font-size: x-small;
+                
+
+            }
+        }
+    }
+  }
+
+@media  (max-width: 500px) {
+    .mainContainer {
+        div {
+            padding: 10px 10px;
+        }
+    }
+  }

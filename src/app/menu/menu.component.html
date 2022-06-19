@@ -1,0 +1,11 @@
+<nav>
+    <div>
+        <a href="/chat" *ngIf="isAuth">Chat</a>
+        <a href="" *ngIf="isAuth">Users</a>
+    </div>
+    <div>
+        <a href="/login" *ngIf="!isAuth">Login</a>
+        <a href="/signup" *ngIf="!isAuth">Signup</a>
+        <a *ngIf="isAuth" (click)="onLogout()">Logout</a>
+    </div>
+</nav>

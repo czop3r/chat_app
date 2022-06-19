@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chat-1984f": {
+      "hosting": {
+        "newChat": [
+          "chat-1984f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chat-1984f"
+  }
+}
